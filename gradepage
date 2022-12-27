@@ -1,0 +1,28 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Grade.aspx.cs" Inherits="Assignment3.Grade" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="gradebox">       
+            <div class="gradecontent">
+            <asp:Label ID="Label1" runat="server" Text="Total Score: "></asp:Label>
+            <asp:Label ID="lblTotalScore" runat="server" Text=""></asp:Label>
+        </div>
+        <div class="gradecontent">
+            <asp:Label ID="Label3" runat="server" Text="Letter Grade: "></asp:Label>
+            <asp:Label ID="lblLetterGrade" runat="server" Text=""></asp:Label>
+        </div>
+        <div>
+            <asp:Label ID="lblErrorMessage" runat="server" Text="" CssClass="error"></asp:Label>
+
+        </div>
+</div>
+    </form>
+</body>
+</html>
