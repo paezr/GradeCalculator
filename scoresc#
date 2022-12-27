@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Assignment3
+{
+    public partial class Scores : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+        }
+
+        protected void btnCalculateGrade_Click(object sender, EventArgs e)
+        {
+            CalculateUserGrade userObj = new CalculateUserGrade();
+            userObj.quizScore = Convert.ToDecimal(txtQuizzes.Text);
+            userObj.assignmentScore = Convert.ToDecimal(txtAssignments.Text);
+            userObj.codingTestScore = Convert.ToDecimal(txtCodingTests.Text);
+            userObj.midtermScore = Convert.ToDecimal(txtMidterm.Text);
+            userObj.finalScore = Convert.ToDecimal(txtFinal.Text);
+
+            decimal total_score = userObj.quizScore + userObj.assignmentScore + userObj.codingTestScore + userObj.midtermScore + userObj.finalScore;
+            if (!(total_score >= 0 && total_score <= 100)){
+                CustomValidator1.IsValid = false;
+            }
+            else {
+                Session["user"] = userObj;
+                Response.Redirect("Grade.aspx");
+            }
+        }
+    }
+}
