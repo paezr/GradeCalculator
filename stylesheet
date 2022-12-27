@@ -1,0 +1,53 @@
+body {
+}
+
+.title{
+    font-size : large;
+    font-weight : bold;
+}
+
+.margintop{
+    margin-top : 20px;
+    text-align : center;
+}
+
+.content{
+    margin-right : 10px;
+    margin-top : 10px;
+}
+
+.gradecontent {
+    margin-top: 10px;
+    font-weight : bold;
+    font-size : large;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+}
+.errorval{
+    font-weight : bold;
+    color : red;
+    margin-left : 10px;
+}
+
+.box {
+    border: 1px solid black;
+    margin: auto;
+    width: 650px;
+    background-color: rgba(0,255,91,0.2);
+}
+
+.gradebox {
+    border: 1px solid black;
+    margin: auto;
+    width: 150px;
+    background-color: rgba(0,255,91,0.2);
+}
+
+
+.button{
+    margin-left : 235px;
+    margin-top : 20px;
+}
